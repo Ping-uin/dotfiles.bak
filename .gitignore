@@ -1,0 +1,5 @@
+*
+!.gitignore
+!nvim/lua/custom/**
+!nvim/lua/plugins/**
+!nvim/lua/core/**
