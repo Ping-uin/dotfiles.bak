@@ -3,3 +3,8 @@
 !nvim/lua/custom/**
 !nvim/lua/plugins/**
 !nvim/lua/core/**
+!nvim/.gitignore
+!nvim/.ignore
+!nvim/.stylua.toml
+!nvim/LICENSE
+!nvim/init.lua
