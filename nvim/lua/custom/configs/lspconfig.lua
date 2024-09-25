@@ -22,3 +22,20 @@ lspconfig.pyright.setup {
   capabilities = capabilities,
   filetypes = { "python" },
 }
+
+lspconfig.julials.setup {
+  on_new_config = function(new_config, _)
+    local julia = vim.fn.expand("$LOCALAPPDATA\\Microsoft\\WindowsApps\\julia.exe")
+    if lspconfig.util.path.is_file(julia) then
+      vim.notify("Hello, I found a Julia executable!")
+      new_config.cmd[1] = julia
+    end
+  end,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "julia" },
+  root_dir = function(fname)
+    return util.root_pattern "Project.toml"(fname) or util.find_git_ancestor(fname)
+  end,
+  single_file_support = true,
+}

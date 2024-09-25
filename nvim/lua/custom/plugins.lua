@@ -9,6 +9,7 @@ local plugins = {
         "mypy",
         "ruff",
         "debugpy",
+        "julia-lsp",
       },
     },
   },
