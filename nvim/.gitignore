@@ -2,3 +2,4 @@
 !lua/custom/**
 !lua/plugins/**
 !lua/core/**
+!README.md
